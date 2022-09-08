@@ -1,0 +1,21 @@
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+.card-container{
+    width: 100vw;
+    height: 100vh;
+    @include flex(column)
+}
+mat-card,form{
+    width: 300px;
+    @include flex((column))
+}
+.actions{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,46 @@
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-container{
+    height: 100vh;
+    width: 100vw;
+    @include flex(column)
+}
+.overview-container{
+    box-sizing: border-box;
+    width: 100%;
+    min-height:100vh ;
+    height: auto;
+    padding: 20px;
+}
+.project-heading{
+    margin-left: 50px;
+}
+.board{
+    @include flex(row);
+    align-items: flex-start;
+    min-height: 100vh;
+    .board-column{
+        @include flex(column);
+        justify-content: flex-start;
+        width: 20%;
+        background-color: whitesmoke;
+        margin: 20px;
+        height: auto;
+        border-radius: 10px;
+        padding: 10px;
+        min-height: 70vh;
+    }
+}
+button[mat-raised-button]{
+    width: 80%;
+}
+app-project-item{
+    width: 80%;
+    margin-top: 20px;
+}
